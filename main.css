@@ -27,9 +27,12 @@ th, td {
     position: fixed;
     text-align: center;
     font-size: 22pt;
+	font-display: auto;
+	font-family: "Montserrat Regular";
     width: 100%;
     padding: 10px 10px;
-    background: #FDBD35;
+    background: #181c1f;
+	opacity: 0.8; 
     /*    color: #f1f1f1;*/
 }
 
@@ -55,7 +58,7 @@ th, td {
     color: white;
     background-color: rgb(65,70,152);
     font-weight: bold;
-/*    font-family: Calibri;*/
+	font-family:'Montserrat Regular';
 }
 
 .body-calibri {
@@ -79,5 +82,7 @@ th, td {
     font-size: 7.0pt;
 /*    color: #595959;*/
 }
+
+
 
 
