@@ -1,4 +1,5 @@
-﻿/*Fixed header code copied from: https://www.w3schools.com/howto/howto_js_sticky_header.asp
+﻿@import url("webfonts/Montserrat_Regular/stylesheet.css");
+/*Fixed header code copied from: https://www.w3schools.com/howto/howto_js_sticky_header.asp
     but JavaScript seemed problematic, so was abandoned
     26/6/21 Nev "fixed" header is very temperamental on Android mobile - Chrome v91.0.4472.101
     it was broken by this 40 character email with the normal font:
@@ -24,15 +25,16 @@ th, td {
 }
 
 .header {
-    position: fixed;
-    text-align: center;
-    font-size: 22pt;
+	position: fixed;
+	text-align: center;
+	font-size: 22pt;
 	font-display: auto;
+	width: 100%;
+	padding: 10px 10px;
+	background: #181c1f;
+	opacity: 0.8;
 	font-family: "Montserrat Regular";
-    width: 100%;
-    padding: 10px 10px;
-    background: #181c1f;
-	opacity: 0.8; 
+	color: #FFFFFF;
     /*    color: #f1f1f1;*/
 }
 
@@ -83,6 +85,11 @@ th, td {
 /*    color: #595959;*/
 }
 
-
-
-
+video {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: -100;
+	transform: translateX(-50%) translateY(-50%);
+	opacity: 0.8;
+}
