@@ -1,4 +1,4 @@
-﻿@import url("webfonts/stylesheet.css");
+﻿@import url("webfonts/Montserrat_Regular/stylesheet.css");
 /*Fixed header code copied from: https://www.w3schools.com/howto/howto_js_sticky_header.asp
     but JavaScript seemed problematic, so was abandoned
     26/6/21 Nev "fixed" header is very temperamental on Android mobile - Chrome v91.0.4472.101
@@ -7,16 +7,10 @@
     Also broken by long web links - avoided with a short "display text" or small font.
     If fixed header is broken - delete sections 1 by 1 to find the problem
 */
-	
-html {
-	scroll-behavior: smooth;
-}
-
 body {
-/*    font-family: Calibri, sans-serif;*/	
-	margin: 0;
+    margin: 0;
+/*    font-family: Calibri, sans-serif;*/
 }
-
 table {
     border-collapse: collapse;
     width: 100%;
@@ -32,50 +26,31 @@ th, td {
 
 .header {
 	position: fixed;
-	text-align: left;
+	text-align: center;
+	font-size: 22pt;
 	font-display: auto;
 	width: 100%;
-	padding: 0px 10px;
-	padding-bottom: 0px;
-	padding-left: 30px;
+	padding: 10px 10px;
 	background: #181c1f;
 	opacity: 0.8;
 	font-family: "Montserrat Regular";
 	color: #FFFFFF;
-}
-
-.navbarlink:link {
-	color: white;
-	text-decoration: none;
-}
-
-.navbarlink:visited {
-	colour: white;
-	text-decoration: none;
-}
-
-.navbarlink:hover {
-	colour: blue;
-	text-decoration: none;
-}
-
-.navbarlink:active {
-	colour: red;
-	text-decoration: none;
+    /*    color: #f1f1f1;*/
 }
 
 .content {
-    font-family: "Mulish ExtraLight Regular";
-	padding: 16px;
-	color: white;
+    padding: 16px;
 }
 
+.text-red {
+    color: red;
+}
 
-.text-frontpage {
-	font-family: "Mulish ExtraLight Regular";
-	color: white;
+.h1-18ptBold {
     text-align: center;
     font-size: 18pt;
+/*    font-family: Calibri, sans-serif;*/
+/*    margin: 0cm;*/
     font-weight: bold;
 }
 
@@ -83,20 +58,22 @@ th, td {
     font-size: 20pt;
     text-align: center;
     color: white;
-    background-color: rgb(2, 104, 194);
+    background-color: rgb(65,70,152);
     font-weight: bold;
 	font-family:'Montserrat Regular';
 }
 
 .body-calibri {
-    font-family: 'Mulish ExtraLight Regular';
+    font-family: Calibri;
 }
 
 .body-purple {
+/*    font-family: Calibri;*/
     color: #7030A0;
 }
 
 .body-acknowledgement {
+/*    font-family: Calibri;*/
     font-style: italic;
     font-size: 9.0pt;
     color: #595959;
@@ -114,12 +91,10 @@ video {
 	left: 50%;
 	z-index: -100;
 	transform: translateX(-50%) translateY(-50%);
-	opacity: 0.3;
+	opacity: 0.8;
 }
 
-.logo {
+.centre {
 	margin-left: auto;
 	margin-right: auto;
 }
-
-
