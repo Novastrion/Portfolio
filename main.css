@@ -73,6 +73,7 @@ video {
 	-o-animation: fadeIn 3s;
 	-ms-animation: fadeIn 3s;
 	animation-fill-mode: forwards;
+	z-index: 1;
 }
 
 .image-fade {
@@ -121,7 +122,6 @@ video {
 	transition-duration: 0.4s;
 }
 
-
 .image-float {
 	text-align: center;
 	position: relative;
@@ -134,6 +134,7 @@ video {
 	animation-timing-function: ease;
 	animation-fill-mode: both;
 }
+
 
 @keyframes floatIn {
 	0% {opacity: 0;}
@@ -154,7 +155,6 @@ video {
 	0% {opacity: 0;}
 	100% {opacity: 1; transform: translate(0, 50%);}
 }
-
 
 .navbarlink:link, .navbarlink:visited {
 	color: white;
