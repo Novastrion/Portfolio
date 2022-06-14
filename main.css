@@ -58,8 +58,8 @@ video {
 
 .header {
 	position: fixed;
-	text-align: left;
 	font-display: auto;
+	text-align: left;
 	width: 100%;
 	padding: 0px 10px;
 	padding-bottom: 0px;
