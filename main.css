@@ -1,13 +1,5 @@
 ﻿@import url("webfonts/stylesheet.css");
-/*Fixed header code copied from: https://www.w3schools.com/howto/howto_js_sticky_header.asp
-    but JavaScript seemed problematic, so was abandoned
-    26/6/21 Nev "fixed" header is very temperamental on Android mobile - Chrome v91.0.4472.101
-    it was broken by this 40 character email with the normal font:
-    Xxxxx.Xxxxxxxxxxxxx@education.nsw.gov.au
-    Also broken by long web links - avoided with a short "display text" or small font.
-    If fixed header is broken - delete sections 1 by 1 to find the problem
-*/
-	
+
 html {
 	scroll-behavior: smooth;
 }
@@ -24,10 +16,44 @@ table {
 }
 
 th, td {
-/*    text-align: center;*/
     padding: 16px;
     font-size: 18pt;
     border: 1px solid #000;
+}
+
+video {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: -100;
+	transform: translateX(-50%) translateY(-50%);
+	opacity: 0.8;
+	animation: decrOpacity 1s;
+	-webkit-animation: decrOpacity 1s;
+	-moz-animation: decrOpacity 1s;
+	-o-animation: decrOpacity 1s;
+	-ms-animation: decrOpacity 1s;
+	animation-fill-mode: forwards;
+	animation-delay: 2s
+}
+
+@keyframes decrOpacity {
+	0% {opacity: 0.8}
+	100% {opacity: 0.2}
+}
+
+@-webkit-keyframes decrOpacity {
+	0% {opacity: 0.8}
+	100% {opacity: 0.2}
+}
+@-o-keyframes decrOpacity {
+	0% {opacity: 0.8}
+	100% {opacity: 0.2}
+}
+
+@-moz-keyframes decrOpacity {
+	0% {opacity: 1}
+	100% {opacity: 0.2}
 }
 
 .header {
@@ -38,36 +64,135 @@ th, td {
 	padding: 0px 10px;
 	padding-bottom: 0px;
 	padding-left: 30px;
-	background: #181c1f;
-	opacity: 0.8;
+	color: rgba(243,243,243,1.00);
 	font-family: "Montserrat Regular";
-	color: #FFFFFF;
+	opacity: 0;
+	animation: fadeIn 3s;
+	-webkit-animation: fadeIn 3s;
+	-moz-animation: fadeIn 3s;
+	-o-animation: fadeIn 3s;
+	-ms-animation: fadeIn 3s;
+	animation-fill-mode: forwards;
 }
 
-.navbarlink:link {
+.image-fade {
+	text-align: center;
+	opacity: 0;
+	animation: fadeIn 3s;
+	-webkit-animation: fadeIn 3s;
+	-moz-animation: fadeIn 3s;
+	-o-animation: fadeIn 3s;
+	-ms-animation: fadeIn 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.arrow-link:link, .arrow-link:visited {
+	opacity: 0.5;
+	transition-duration: 0.4s;
+}
+
+.arrow-link:hover {
+	opacity: 1;
+	transition-duration: 0.4s;
+}
+
+.arrow-link:visited {
+	opacity: 0.5;
+	transition-duration: 0.4s;
+}
+
+
+.image-float {
+	text-align: center;
+	position: relative;
+	opacity: 0;
+	animation: floatIn 1s;
+	-webkit-animation: floatIn 1s;
+	-moz-animation: floatIn 1s;
+	-o-animation: floatIn 1s;
+	-ms-animation: floatIn 1s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+}
+
+@keyframes floatIn {
+	0% {opacity: 0;}
+	100% {opacity: 1; transform: translate(0, 50%);}
+}
+
+@-webkit-keyframes floatIn {
+	0% {opacity: 0;}
+	100% {opacity: 1; transform: translate(0, 50%);}
+}
+
+@-o-keyframes floatIn {
+ 	0% {opacity: 0;}
+	100% {opacity: 1; transform: translate(0, 50%);}
+}
+
+@-moz-keyframes floatIn {
+	0% {opacity: 0;}
+	100% {opacity: 1; transform: translate(0, 50%);}
+}
+
+
+.navbarlink:link, .navbarlink:visited {
 	color: white;
 	text-decoration: none;
-}
-
-.navbarlink:visited {
-	colour: white;
-	text-decoration: none;
+	transition-duration: 0.4s;
 }
 
 .navbarlink:hover {
-	colour: blue;
+	color: #0088ff;
+	transition-duration: 0.4s;
 	text-decoration: none;
 }
 
 .navbarlink:active {
-	colour: red;
+	color: #283f6d;
 	text-decoration: none;
+}
+
+.link:link, .link:visited {
+	color: #0088ff;
+	transition-duration: 0.4s;
+}
+
+.link:hover {
+	color: #429bf5;
+	transition-duration: 0.4s;
+}
+
+.link:active {
+	color: #283f6d;
 }
 
 .content {
     font-family: "Mulish ExtraLight Regular";
 	padding: 16px;
 	color: white;
+	background: rgba(24,28,31,0.80);
+
 }
 
 
@@ -80,7 +205,7 @@ th, td {
 }
 
 .h2-BlueBG {
-    font-size: 20pt;
+    font-size: 25pt;
     text-align: center;
     color: white;
     background-color: rgb(2, 104, 194);
@@ -105,21 +230,11 @@ th, td {
         font-family: 'Arial Narrow';
 /*    font-style: italic;*/
     font-size: 7.0pt;
-/*    color: #595959;*/
 }
 
-video {
-	position: fixed;
-	top: 50%;
-	left: 50%;
-	z-index: -100;
-	transform: translateX(-50%) translateY(-50%);
-	opacity: 0.3;
-}
 
 .logo {
 	margin-left: auto;
 	margin-right: auto;
 }
-
 

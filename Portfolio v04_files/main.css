@@ -1,0 +1,137 @@
+﻿@import url("webfonts/stylesheet.css");
+/*Fixed header code copied from: https://www.w3schools.com/howto/howto_js_sticky_header.asp
+    but JavaScript seemed problematic, so was abandoned
+    26/6/21 Nev "fixed" header is very temperamental on Android mobile - Chrome v91.0.4472.101
+    it was broken by this 40 character email with the normal font:
+    Xxxxx.Xxxxxxxxxxxxx@education.nsw.gov.au
+    Also broken by long web links - avoided with a short "display text" or small font.
+    If fixed header is broken - delete sections 1 by 1 to find the problem
+*/
+	
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+/*    font-family: Calibri, sans-serif;*/	
+	margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #000;
+}
+
+th, td {
+/*    text-align: center;*/
+    padding: 16px;
+    font-size: 18pt;
+    border: 1px solid #000;
+}
+
+.header {
+	position: fixed;
+	text-align: left;
+	font-display: auto;
+	width: 100%;
+	padding: 0px 10px;
+	padding-bottom: 0px;
+	padding-left: 30px;
+	background: #181c1f;
+	opacity: 0.8;
+	font-family: "Montserrat Regular";
+	color: #FFFFFF;
+}
+
+.navbarlink:link, .navbarlink:visited {
+	color: white;
+	text-decoration: none;
+	transition-duration: 0.4s;
+}
+
+.navbarlink:hover {
+	color: #0088ff;
+	transition-duration: 0.4s;
+	text-decoration: none;
+}
+
+.navbarlink:active {
+	color: #283f6d;
+	text-decoration: none;
+}
+
+.link:link, .link:visited {
+	color: #0088ff;
+	transition-duration: 0.4s;
+}
+
+.link:hover {
+	color: #429bf5;
+	transition-duration: 0.4s;
+}
+
+.link:active {
+	color: #283f6d;
+}
+
+.content {
+    font-family: "Mulish ExtraLight Regular";
+	padding: 16px;
+	color: white;
+}
+
+
+.text-frontpage {
+	font-family: "Mulish ExtraLight Regular";
+	color: white;
+    text-align: center;
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+.h2-BlueBG {
+    font-size: 20pt;
+    text-align: center;
+    color: white;
+    background-color: rgb(2, 104, 194);
+    font-weight: bold;
+	font-family:'Montserrat Regular';
+}
+
+.body-calibri {
+    font-family: 'Mulish ExtraLight Regular';
+}
+
+.body-purple {
+    color: #7030A0;
+}
+
+.body-acknowledgement {
+    font-style: italic;
+    font-size: 9.0pt;
+    color: #595959;
+}
+.body-smallFont {
+        font-family: 'Arial Narrow';
+/*    font-style: italic;*/
+    font-size: 7.0pt;
+/*    color: #595959;*/
+}
+
+video {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: -100;
+	transform: translateX(-50%) translateY(-50%);
+	opacity: 0.3;
+}
+
+.logo {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+
+
