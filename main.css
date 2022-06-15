@@ -238,12 +238,24 @@ th, td {
 	color: #283f6d;
 }
 
+.content-2 {
+    font-family: "Mulish ExtraLight Regular";
+	padding: 16px;
+	font-size: 20px;
+	color: white;
+	background: rgba(5,8,18,0.80);
+	margin: 200px;
+	text-align: center
+
+}
+
 .content {
     font-family: "Mulish ExtraLight Regular";
 	padding: 16px;
 	font-size: 20px;
 	color: white;
 	background: rgba(5,8,18,0.80);
+	text-align: center
 
 }
 
@@ -347,7 +359,7 @@ th, td {
  	position: absolute;
   	top: 50%;
   	left: 50%;
-  	transform: translate(-50%, 350%);
+  	transform: translate(-50%, 500%);
 }
 
 
@@ -391,3 +403,7 @@ th, td {
 }
 
 
+
+.main-header {
+	font-size: 50px;
+}
