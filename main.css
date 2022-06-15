@@ -5,23 +5,35 @@ html {
 }
 
 body {
-/*    font-family: Calibri, sans-serif;*/	
 	margin: 0;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+  	display: inline;
+	float: right;
 }
 
 table {
     border-collapse: collapse;
     width: 100%;
-    border: 1px solid #000;
+    border: none;
 }
 
 th, td {
     padding: 16px;
     font-size: 18pt;
-    border: 1px solid #000;
+    border: none;
 }
 
-video {
+
+
+.video-main {
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -56,7 +68,32 @@ video {
 	100% {opacity: 0.2}
 }
 
-.header {
+.video-alt {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: -100;
+	transform: translateX(-50%) translateY(-50%);
+	opacity: 0.2;
+}
+
+.navbarlink {
+	position: relative;
+	transform: translate(-100px, 0px);
+	display: block;
+  	padding: 12px;
+	font-size: 25px;
+}
+
+.navbarlink-p2 {
+	position: relative;
+	transform: translate(-100px, -70px);
+	display: block;
+  	padding: 12px;
+	font-size: 25px;
+}
+
+.header-main {
 	position: fixed;
 	font-display: auto;
 	text-align: left;
@@ -66,6 +103,7 @@ video {
 	padding-left: 30px;
 	color: rgba(243,243,243,1.00);
 	font-family: "Montserrat Regular";
+	z-index: 1;
 	opacity: 0;
 	animation: fadeIn 3s;
 	-webkit-animation: fadeIn 3s;
@@ -73,6 +111,18 @@ video {
 	-o-animation: fadeIn 3s;
 	-ms-animation: fadeIn 3s;
 	animation-fill-mode: forwards;
+}
+
+.header-alt {
+	position: fixed;
+	font-display: auto;
+	text-align: left;
+	width: 100%;
+	padding: 0px 10px;
+	padding-bottom: 0px;
+	padding-left: 30px;
+	color: rgba(243,243,243,1.00);
+	font-family: "Montserrat Regular";
 	z-index: 1;
 }
 
@@ -125,6 +175,8 @@ video {
 .image-float {
 	text-align: center;
 	position: relative;
+	top: 0;
+	left: 0;
 	opacity: 0;
 	animation: floatIn 1s;
 	-webkit-animation: floatIn 1s;
@@ -134,7 +186,6 @@ video {
 	animation-timing-function: ease;
 	animation-fill-mode: both;
 }
-
 
 @keyframes floatIn {
 	0% {opacity: 0;}
@@ -156,19 +207,19 @@ video {
 	100% {opacity: 1; transform: translate(0, 50%);}
 }
 
-.navbarlink:link, .navbarlink:visited {
+.navbarlink:link, .navbarlink:visited, .navbarlink-p2:link, .navbarlink-p2:visited {
 	color: white;
 	text-decoration: none;
 	transition-duration: 0.4s;
 }
 
-.navbarlink:hover {
+.navbarlink:hover, .navbarlink-p2:hover {
 	color: #0088ff;
 	transition-duration: 0.4s;
 	text-decoration: none;
 }
 
-.navbarlink:active {
+.navbarlink:active, .navbarlink-p2:active {
 	color: #283f6d;
 	text-decoration: none;
 }
@@ -190,11 +241,11 @@ video {
 .content {
     font-family: "Mulish ExtraLight Regular";
 	padding: 16px;
+	font-size: 20px;
 	color: white;
-	background: rgba(24,28,31,0.80);
+	background: rgba(5,8,18,0.80);
 
 }
-
 
 .text-frontpage {
 	font-family: "Mulish ExtraLight Regular";
@@ -217,24 +268,126 @@ video {
     font-family: 'Mulish ExtraLight Regular';
 }
 
-.body-purple {
-    color: #7030A0;
-}
-
 .body-acknowledgement {
     font-style: italic;
     font-size: 9.0pt;
     color: #595959;
 }
-.body-smallFont {
-        font-family: 'Arial Narrow';
-/*    font-style: italic;*/
-    font-size: 7.0pt;
-}
-
 
 .logo {
 	margin-left: auto;
 	margin-right: auto;
 }
+
+.container {
+	position: relative;
+	height: 50%;
+	width: 50%;
+	display: inline-block;
+}
+
+.image-link {
+	display: block;
+	width: 50%;
+	height: auto;
+}
+
+.overlay {
+  	position: absolute;
+  	top: 0;
+  	bottom: 0;
+  	left: 0;
+  	right: 0;
+  	height: 100%;
+  	width: 100%;
+  	opacity: 0;
+  	transition: .5s ease;
+  	background-color: rgba(0,136,255,0.80);
+	z-index: 0;
+}
+
+.td-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgba(0,136,255,0.80);
+}
+
+.container:hover, .overlay:hover {
+	opacity: 1;
+	z-index: 10;
+}
+
+.td-container {
+	position: relative;
+}
+
+.td-container, .image-link {
+	transform: scale(1, 1);
+	transition-duration: 0.4s;
+}
+
+.td-container:hover, .image-link {
+	transform: scale(1.1, 1.1);
+	transition-duration: 0.4s;
+	z-index: 10;
+}
+
+.text-hover-td {
+	color: white;
+	opacity: 1;
+  	font-size: 20px;
+	text-align: center;
+ 	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, 350%);
+}
+
+
+
+.text-hover {
+ 	color: white;
+  	font-size: 30px;
+	text-align: center;
+ 	position: absolute;
+  	top: 50%;
+  	left: 50%;
+  	transform: translate(-50%, -50%);
+}
+
+.navbutton {
+	position: relative;
+	width: 60%;
+	height: 100%;
+	display: inline-block;
+}
+
+.test {
+}
+
+.arrow {
+	transform: scale(1, 1);
+	transition-duration: 0.4s;
+}
+
+
+
+.arrow:hover {
+	animation: arrowHover 2s;
+	animation-timing-function: ease;
+	animation-iteration-count: infinite;
+}
+
+@keyframes arrowHover {
+	0% { transform: translate(0px, 0px); opacity: 1; }
+	100% { transform: translate(0px, 50px); opacity: 0; }
+}
+
 

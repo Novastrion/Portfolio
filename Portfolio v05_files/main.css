@@ -1,0 +1,245 @@
+﻿@import url("webfonts/stylesheet.css");
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+/*    font-family: Calibri, sans-serif;*/	
+	margin: 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 1px solid #000;
+}
+
+th, td {
+    padding: 16px;
+    font-size: 18pt;
+    border: 1px solid #000;
+}
+
+video {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: -100;
+	transform: translateX(-50%) translateY(-50%);
+	opacity: 0.8;
+	animation: decrOpacity 1s;
+	-webkit-animation: decrOpacity 1s;
+	-moz-animation: decrOpacity 1s;
+	-o-animation: decrOpacity 1s;
+	-ms-animation: decrOpacity 1s;
+	animation-fill-mode: forwards;
+	animation-delay: 2s
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+  	display: inline;
+	float: right;
+}
+
+.navbarlink {
+	position: relative;
+	transform: translate(-100px, 0px);
+	display: block;
+  	padding: 12px;
+	font-size: 25px;
+}
+
+@keyframes decrOpacity {
+	0% {opacity: 0.8}
+	100% {opacity: 0.2}
+}
+
+@-webkit-keyframes decrOpacity {
+	0% {opacity: 0.8}
+	100% {opacity: 0.2}
+}
+@-o-keyframes decrOpacity {
+	0% {opacity: 0.8}
+	100% {opacity: 0.2}
+}
+
+@-moz-keyframes decrOpacity {
+	0% {opacity: 1}
+	100% {opacity: 0.2}
+}
+
+.header {
+	position: fixed;
+	font-display: auto;
+	text-align: left;
+	width: 100%;
+	padding: 0px 10px;
+	padding-bottom: 0px;
+	padding-left: 30px;
+	color: rgba(243,243,243,1.00);
+	font-family: "Montserrat Regular";
+	opacity: 0;
+	animation: fadeIn 3s;
+	-webkit-animation: fadeIn 3s;
+	-moz-animation: fadeIn 3s;
+	-o-animation: fadeIn 3s;
+	-ms-animation: fadeIn 3s;
+	animation-fill-mode: forwards;
+	z-index: 1;
+}
+
+.image-fade {
+	text-align: center;
+	opacity: 0;
+	animation: fadeIn 3s;
+	-webkit-animation: fadeIn 3s;
+	-moz-animation: fadeIn 3s;
+	-o-animation: fadeIn 3s;
+	-ms-animation: fadeIn 3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@-webkit-keyframes fadeIn {
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@-o-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.arrow-link:link, .arrow-link:visited {
+	opacity: 0.5;
+	transition-duration: 0.4s;
+}
+
+.arrow-link:hover {
+	opacity: 1;
+	transition-duration: 0.4s;
+}
+
+.arrow-link:visited {
+	opacity: 0.5;
+	transition-duration: 0.4s;
+}
+
+.image-float {
+	text-align: center;
+	position: relative;
+	opacity: 0;
+	animation: floatIn 1s;
+	-webkit-animation: floatIn 1s;
+	-moz-animation: floatIn 1s;
+	-o-animation: floatIn 1s;
+	-ms-animation: floatIn 1s;
+	animation-timing-function: ease;
+	animation-fill-mode: both;
+}
+
+
+@keyframes floatIn {
+	0% {opacity: 0;}
+	100% {opacity: 1; transform: translate(0, 50%);}
+}
+
+@-webkit-keyframes floatIn {
+	0% {opacity: 0;}
+	100% {opacity: 1; transform: translate(0, 50%);}
+}
+
+@-o-keyframes floatIn {
+ 	0% {opacity: 0;}
+	100% {opacity: 1; transform: translate(0, 50%);}
+}
+
+@-moz-keyframes floatIn {
+	0% {opacity: 0;}
+	100% {opacity: 1; transform: translate(0, 50%);}
+}
+
+.navbarlink:link, .navbarlink:visited {
+	color: white;
+	text-decoration: none;
+	transition-duration: 0.4s;
+}
+
+.navbarlink:hover {
+	color: #0088ff;
+	transition-duration: 0.4s;
+	text-decoration: none;
+}
+
+.navbarlink:active {
+	color: #283f6d;
+	text-decoration: none;
+}
+
+.link:link, .link:visited {
+	color: #0088ff;
+	transition-duration: 0.4s;
+}
+
+.link:hover {
+	color: #429bf5;
+	transition-duration: 0.4s;
+}
+
+.link:active {
+	color: #283f6d;
+}
+
+.content {
+    font-family: "Mulish ExtraLight Regular";
+	padding: 16px;
+	font-size: 20px;
+	color: white;
+	background: rgba(5,8,18,0.80);
+
+}
+
+
+.text-frontpage {
+	font-family: "Mulish ExtraLight Regular";
+	color: white;
+    text-align: center;
+    font-size: 18pt;
+    font-weight: bold;
+}
+
+.h2-BlueBG {
+    font-size: 25pt;
+    text-align: center;
+    color: white;
+    background-color: rgb(2, 104, 194);
+    font-weight: bold;
+	font-family:'Montserrat Regular';
+}
+
+.body-calibri {
+    font-family: 'Mulish ExtraLight Regular';
+}
+
+
+.logo {
+	margin-left: auto;
+	margin-right: auto;
+}
+
