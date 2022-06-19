@@ -104,7 +104,9 @@
 <br>
 <br>
 <span><img src="images/Adobe_Dreamweaver_CC_icon.svg.png" alt="Dreamweaver Logo" width="10%"><h2>Adobe Dreamweaver</h2></span>
-<p>Dreamweaver is a web development program developed by Macromedia in 1997 and aquired by Adobe in 2005. The software allows for the creation and manipulation of HTML and CSS files and most notably features a live preview of the website as the code is edited. This website was developed using Adobe Dreamweaver and is currently being hosted on GitHub.</p>
+<p>Dreamweaver is a web development program developed by Macromedia in 1997 and aquired by Adobe in 2005. The software allows for the creation and manipulation of HTML and CSS files and most notably features a live preview of the website as the code is edited.</p> 
+
+<p>This website was developed using Adobe Dreamweaver and was chosen over other web development softwares such as Visual Studio Code because of its simpler and more accessible user interface as well as the live updating view. However, while Dreamweaver may have been suitable for this project it does lack complexity compared to other applications such as VS Code which is aimed at developers who are more experienced with web development and programming with HTML and CSS.</p> 
 <br>
 <img src="images/WebDevelopment.png" alt="Dreamweaver" width="50%">
 <img src="images/WebSS.png" alt="Dreamweaver 2" width="50%">
@@ -115,7 +117,13 @@
 <br>
 <span><img src="images/GitHub.png" alt="GitHub Logo" width="10%"></span><h2>GitHub</h2>
 <p>GitHub, Inc. is an online development platform that uses Git software in order to provide internet hosting and software development of millions of users across the globe.</p>
-<span> This website is currently being hosted on GitHub and its repository can be viewed here: <a href="https://github.com/Novastrion/Portfolio" class="link" target="_blank">https://github.com/Novastrion/Portfolio</a></span>
+<p>For this website, a remote GitHub repository was created and connected to a local repository via Dreamweaver. This allowed for the remote repository to be updated directly via Dreamweaver through executing a save/commit command, which saves any changes made to the local repository, followed by the Git push command, which uploads the content in the local repository to the remote repository.</p>
+<br>
+<img src="images/Commit.PNG" alt="Commit" width="80%">
+<img src="images/Push.PNG" alt="Git Push" width="80%">
+<br>
+<br>
+<span> This website's GitHub repository can be viewed here: <a href="https://github.com/Novastrion/Portfolio" class="link" target="_blank">https://github.com/Novastrion/Portfolio</a></span>
 <br>
 <br>
 <br>
@@ -168,21 +176,71 @@
 <br>
 <h2>Raster Graphics</h2>
 <p>Raster (or Bitmap) graphics are a type of digital image that is composed of many tiny rectangular pixels arranged in a grid. They are advantageous over other graphic formats such as vectors as they are able to accurately display complex and detailed images, however they are limited in the fact that they lose their quality as they are scaled up and down.</p>
+<br>
 <h3>Anti-aliasing</h3>
 <p>Anti-aliasing is a technique for smoothing rough edges in digital raster images and is commonly used in applications such as digital photography, video games, and computer graphics. It works by averaging the colour of the pixels at a boundary which to the naked eye makes the edge appear more smooth.</p>
 <img src="images/Anti-aliasing.jpg" alt="anti aliasing" width="50%">
 <br>
 <span style="font-size: 18px">Image retrieved from: <a href="https://www.displayninja.com/best-anti-aliasing-mode/" class="link">https://www.displayninja.com/best-anti-aliasing-mode/</a></span>
+<br>
 <h3>Compression</h3>
 <p>Image compression is the process of reducing the data sizes of digital image files through the use of algorithms. This is beneficial as it lowers the costs for the storage and transmission of image files. There are two image compression types: lossless and lossy.</p>
-<br>
 <p>Lossless compression is typical of PNG and GIF file types and involves the reduction of file sizes without any loss of information. Lossless compression is most valued for applications where fine image details and high visual quality are necessary such as medical imaging, technical drawings or clip art. </p>
-<br>
 <p>Lossy compression is typical of JPEG file types and involves the reduction of file sizes through the approximation and discarding of data, meaning a slight loss of information as a result. Lossy compression is most valued for applications where the optimisation of file sizes is necessary such as online uploading, downloading or streaming.</p>
-<br>
 <img src="images/compression.jpeg" alt="compression" width="50%">
 <br>
 <span style="font-size: 18px">Image retrieved from: <a href="https://www.primeinspiration.com/video-compression-techniques.html" class="link">https://www.primeinspiration.com/video-compression-techniques.html</a></span>
+<br>
+<h3>Colour Depth</h3>
+<p>Colour depth (or bit depth) refers to the number of bits used to represent the colour of a single pixel in a digital raster image. Most modern images tend to use bits per colour systems, in which predetermined colour components are assigned a certain number of bits which controls how much that colour is present in the pixel. The higher the number of bits, the more combinations and therefore colours are able to be displayed in the image. For example an image that has a colour depth of 1-bit can only display 2 different colours for each pixel as 1 bit has 2<sup>1</sup> combinations (0 or 1), however an image that has a colour depth of 24-bit can display 16,777,216 different colours as 24 bits have 2<sup>24</sup> combinations.</p>
+<p>The most common colour model is the RGB (red, green, blue) model in which the colours red, green and blue are combined in different ways to create a wide arrangement of colours on the colour spectrum. For true colour, each component has a depth of 1 byte (8 bits) meaning their are 256 different levels of intensity for each colour. With 3 different colour components and 1 byte for each this means that the colour depth for images using true colour RGB is 24-bit.</p>
+<div>
+<table>
+	<tr align="center">
+		<td style="font-size: 16px">
+			<img src="images/24_bit.png" alt="24-bit colour" style="width: 100%"> 
+			<span>24-bit</span>
+			<br>
+			<span>16.8 Mil Colours</span>
+			<br>
+			<span>98 KB</span>
+		</td>
+		<td style="font-size: 16px">
+			<img src="images/8_bit.png" alt="8-bit colour" style="width: 100%"> 
+			<span>8-bit</span>
+			<br>
+			<span>256 Colours</span>
+			<br>
+			<span>37 KB</span>
+		</td>
+		<td style="font-size: 16px">
+			<img src="images/4_bit.png" alt="24-bit colour" style="width: 100%"> 
+			<span>4-bit</span>
+			<br>
+			<span>16 Colours</span>
+			<br>
+			<span>13 KB</span>
+		</td>
+		<td style="font-size: 16px">
+			<img src="images/2_bit.png" alt="24-bit colour" style="width: 100%">
+			<span>2-bit</span>
+			<br>
+			<span>4 Colours</span>
+			<br>
+			<span>6 KB</span>
+		</td>
+		<td style="font-size: 16px">
+			<img src="images/1_bit.png" alt="24-bit colour" style="width: 100%">
+			<span>1-bit</span>
+			<br>
+			<span>2 Colours</span>
+			<br>
+			<span>4 KB</span>
+		</td>
+	</tr>
+</table>
+	<span style="font-size: 18px">Images and data retrieved from: <a href="https://en.wikipedia.org/wiki/Color_depth" class="link">https://en.wikipedia.org/wiki/Color_depth</a></span>
+</div>
 <br>
 <br>
 <br>
@@ -385,6 +443,9 @@
 <br>
 <br>
 <span><img src="images/Microsoft_Office_Access_(2019-present).svg.png" alt="Access Logo" width="10%"><h2>Microsoft Access</h2></span>
+<p>Access is a database management system (DBSM) software developed by Microsoft that allows for the construction and management of relational databases. It allows for the creation of tables, queries, forms and reports and features a graphical user interface that allows for the structuring of relationships and entities in a schema diagram.</p>
+<br>
+<br>
 <h3>Illchay Island Adventures (Pokemart)</h3>
 <br>
 <img src="images/DBPokemoneSS.PNG" alt="Pokemon Database" width="50%">
